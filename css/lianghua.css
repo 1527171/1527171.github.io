@@ -1,0 +1,18 @@
+#wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #000; /* 波浪的颜色 */
+  animation: wave 2s linear infinite; /* 使用CSS动画实现波浪效果 */
+}
+
+@keyframes wave {
+  0% { 
+    transform: translateY(0);
+  }
+  100% { 
+    transform: translateY(-50px); /* 波浪的高度可以根据需求调整 */
+  }
+}

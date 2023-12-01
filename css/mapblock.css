@@ -1,0 +1,26 @@
+#map{
+	background-color:white;
+	position: relative;
+	/*left: 50px;*/
+	/*border: 1px solid;*/
+	width:500px;
+	height:300px;
+}
+#notebook {
+	height:300px;
+	/*分散对齐*/
+	display: flex;
+  	justify-content: space-between;
+
+	width: 80%;
+    margin: 0 auto; /* 将左右外边距设置为auto，从而使得容器水平居中 */
+
+}
+#china-map {
+	width: 500px;
+	height: 300px;
+	/*position: absolute;*/
+	border: 1px solid;
+	left: calc(50% - 500px);
+	top: 100px;
+}

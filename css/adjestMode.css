@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#modeButton{
+	position: relative;
+	left: 40px;
+	top: 17px;
+	height: 25px;
+	width: 50px;
+	border:0px solid #6cf;
+	/*border-top-left-radius: 10px;*/
+	transition:background-color 0.1s linear;
+	border-radius: 1000px;
+	background-color: #6cf;
+}
+#light{
+	position: absolute;
+	left: 0px;
+	bottom: 0;
+	height: 25px;
+	width: 25px;
+	border-radius: 25px;
+	background-color: #FFD700;
+	transition:background-color 0.1s linear;
+}
+#black{
+
+}
