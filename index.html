@@ -3,344 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <title>景&nbsp彡</title>
+    <!-- 四个格子 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> Playfair+Display:700|Raleway:500.700'> -->
+    <link rel="stylesheet" href="./css/reset.min.css"> 
+    <link rel='stylesheet' href='./css/fonts_googleapis_com.css'>
+    <link rel="stylesheet" href="./css/fourBlock.css">
+    <!-- 夜间模式 -->
     <link rel="stylesheet" href="css\adjestMode.css">
+    <!-- 地图模块 -->
     <link rel="stylesheet" href="css\mapblock.css">
-    <style>
-        @keyframes flash-in {
-          0% { opacity: 0; }
-          50% { opacity: 0; }
-          100% { opacity: 1; }
-        }
-
-        @keyframes flash-out {
-          0% { opacity: 1; }
-          50% { opacity: 0; }
-          100% { opacity: 0; }
-        }
-
-        #notebook {
-          opacity: 0;
-          animation: flash-in 2s 1; /* 设置初始动画，默认为不可见时的动画 */
-          animation-fill-mode: forwards;
-        }
-
-
-/*        .animation-container {
-          width: 100%;
-        }
-
-        .moving-bar {
-          /*position: absolute;*
-          left: 0;
-          top: 0;
-          width: 100px;
-          height: 20px;
-          background-color: black;
-          animation: moveInOut 2s forwards;
-        }*/
-
-        @keyframes moveInOut {
-          0% {
-            transform: translateX(-100%);
-          }
-          50% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-
-        .hidden-text {
-
-            text-align: center; /* 文本水平居中 */
-            display: flex; /* 使用flex布局 */
-            justify-content: center; /* 主轴居中 */
-            align-items: center; /* 交叉轴居中 */
-            margin: 20px 0; /* 上下留出20px的空隙 */
-            font-size: 50px;
-            font-weight: border;
-            font-family: 黑体;
-            opacity: 0; /* 初始设置透明 */
-            animation: flash-in 1s forwards; /* 应用动画效果 */
-        }
-
-
-    </style>
-    <!-- // <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script> -->
-    <script type="text/javascript" src="js\lodash.min.js"></script>
-    <script type="text/javascript" src="js\echarts.min.js"></script>
-    <script type="text/javascript" src="js\map\china.js"></script>
-    <script type="text/javascript" src="js\fontSet.js"></script>
-    <script src="js\adjestMode.js"></script>
-    <script src="js\mapJS.js"></script>
+    <!-- 精选 -->
+    <!-- // <script type="text/javascript" src="js\fontSet.js"></script> -->
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/exhibit.css">
 </head>
+
+
+
 <body style="background-color: rgb(255, 255, 224);color:rgb(0, 0, 0);">
-    <div id="adjestMode" style="display:flex;">
-    	<div id="modeButton" onclick="exchange()" style="background-color: #6cf;">
-    		<div id="light" style="background-color: #FFD700;">
-    		</div>
-    	</div>
+    <div id="handBlock" style="background-color:black;height:60px;width:100%;position: fixed;z-index:9;">
+        <script src="js\adjestMode.js"></script>
+        <div id="adjestMode" style="display:flex;">
+            <div id="modeButton" onclick="exchange()" style="background-color: #6cf;">
+                <div id="light" style="background-color: #FFD700;">
+                </div>
+            </div>
+        </div>
     </div>
     <div style="height:100px;"></div>
-    <!-- <button id="back" style="display: none">返回全国</button> -->
-    <!-- 居中作为 标题 -->
-    <!-- <div class="hidden-text">Lewis的游记</div> -->
-<!--     <div id="notebook" style="background-color:;display:flex;">
 
+      <!-- 4个格子 -->
+    <h1 class="title">汇&nbsp&nbsp总</h1>
+    <div id="app" class="container1">
+        <card data-image="./Data/pictures/index/human.jpeg" onclick="openPhotographerPage('human')">
+            <h1 slot="header">人&nbsp&nbsp物</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </card>
+        <card data-image="./Data/pictures/index/scenery.jpeg" onclick="openPhotographerPage('scenery')">
+            <h1 slot="header">景&nbsp&nbsp物</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </card>
+        <card data-image="./Data/pictures/index/animal.jpeg" onclick="openPhotographerPage('animal')">
+            <h1 slot="header">动&nbsp&nbsp物</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </card>
+        <card data-image="./Data/pictures/index/photographer.jpeg" onclick="openPhotographerPage('photographer')">
+            <h1 slot="header">摄影家</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </card>
+        <!-- 网页跳转     -->
         <script>
-            // 监听滑轮事件 
-            var notebook = document.getElementById('notebook');
-            function checkVisibilityAndAnimate() {
-              if (isElementInViewport(notebook)) {
-                // console.log('目标元素在页面上可见。');
-                notebook.style.animation = "flash-in 1s 1";
-                notebook.style.animationFillMode = "forwards";
-              } else {
-                // console.log('目标元素在页面上不可见。');
-                notebook.style.animation = "flash-out 1s 1";
-                notebook.style.animationFillMode = "forwards";
-              }
-            }
-            // 元素闪现效果
-            function isElementInViewport(el) {
-              var rect = el.getBoundingClientRect();
-              return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-              );
-            }
-
-            window.addEventListener('scroll', checkVisibilityAndAnimate);
+          function openPhotographerPage(name) {
+            var bodyBackground = document.body.style.backgroundColor;
+            console.log(bodyBackground)
+            if (bodyBackground == 'rgb(255, 255, 224)') {
+                var otherSwitch = true;
+                } else if (bodyBackground == 'rgb(47, 79, 79)') {
+                var otherSwitch = false;
+                }
+            var modParam = otherSwitch ? 'true' : 'false';
+            window.open('./' + name +'.html?mod=' + modParam, '_blank');
+          }
         </script>
-        <div id="map" style="background-color:rgba(255, 255, 255, 0);">
-            <div id="china-map"></div>
-            <script>
-              var myChart = echarts.init(document.getElementById("china-map"));
-              var oBack = document.getElementById("back");
-
-              var catches = {};
-
-              var provinces = [
-                "shanghai",
-                "hebei",
-                "shanxi",
-                "neimenggu",
-                "liaoning",
-                "jilin",
-                "heilongjiang",
-                "jiangsu",
-                "zhejiang",
-                "anhui",
-                "fujian",
-                "jiangxi",
-                "shandong",
-                "henan",
-                "hubei",
-                "hunan",
-                "guangdong",
-                "guangxi",
-                "hainan",
-                "sichuan",
-                "guizhou",
-                "yunnan",
-                "xizang",
-                "shanxi1",
-                "gansu",
-                "qinghai",
-                "ningxia",
-                "xinjiang",
-                "beijing",
-                "tianjin",
-                "chongqing",
-                "xianggang",
-                "aomen",
-              ];
-
-              var provincesText = [
-                "上海",
-                "河北",
-                "山西",
-                "内蒙古",
-                "辽宁",
-                "吉林",
-                "黑龙江",
-                "江苏",
-                "浙江",
-                "安徽",
-                "福建",
-                "江西",
-                "山东",
-                "河南",
-                "湖北",
-                "湖南",
-                "广东",
-                "广西",
-                "海南",
-                "四川",
-                "贵州",
-                "云南",
-                "西藏",
-                "陕西",
-                "甘肃",
-                "青海",
-                "宁夏",
-                "新疆",
-                "北京",
-                "天津",
-                "重庆",
-                "香港",
-                "澳门",
-              ];
-
-              oBack.onclick = function () {
-                loadMap("china", "中国");
-
-                oBack.style.setProperty('display', 'none');
-              };
-
-              loadMap("china", "中国");
-
-              // 加载地图
-              function loadMap(mapType, name) {
-                var option = {
-                  title: {
-                    text: name || mapType,
-                    left: "center",
-                  },
-                  series: [
-                    {
-                      name: name || mapType,
-                      type: "map",
-                      mapType,
-                      roam: false, //是否开启鼠标缩放和平移漫游
-                      itemStyle: {
-                        //地图区域的多边形 图形样式
-                        normal: {
-                          //是图形在默认状态下的样式
-                          label: {
-                            show: true, //是否显示标签
-                            textStyle: {
-                              color: "rgba(255,255,255,0)",
-                            },
-                          },
-                        },
-                      },
-                      aspectScale: mapType === "china" ? 0.75 : 1,
-                      top: "10%", //组件距离容器的距离
-                      data: []  // 用于存储地图区域相关数据
-                    },
-                  ],
-                };
-                // 模拟处理每个省份的函数
-                function processProvince(province) {
-                  // 读取本地保存的mapData文件夹中相应省份的文本文件进行搜索
-                  // 如果找到特定的信息，根据需要修改相应省份的地图区域颜色
-                  var filePath = 'mapData/text/' + province + '.txt';
-                  var fileContent = readFileContent(filePath);  // 读取文件内容的函数，需根据实际情况实现
-
-                  if (fileContent.includes("***")) {
-                    console.log('Province ' + province + ' contains the specified information');
-                    // 在这里可以根据需要修改相应省份的地图区域颜色
-                  }
-                }
-
-                // 使用forEach循环遍历省份列表，并调用处理函数
-                provincesText.forEach(function(province) {
-                  processProvince(province);
-                });
-
-
-                // 清理画布
-                myChart.clear();
-
-                myChart.setOption(option);
-
-                myChart.off("click");
-
-                if (mapType === "china") {
-                  // 全国时，添加click 进入省级
-                  myChart.on("click", function (param) {
-                    //遍历取到provincesText 中的下标  去拿到对应的省js
-                    for (var i = 0; i < provincesText.length; i++) {
-                      if (param.name === provincesText[i]) {
-                        //显示对应省份的方法
-                        showProvince(provinces[i], provincesText[i]);
-
-                        break;
-                      }
-                    }
-
-                    oBack.style.setProperty('display', 'block');
-                  });
-                } else {
-                  // 省份，添加双击 回退到全国
-                  myChart.on("dblclick", function () {
-                    loadMap("china", "中国");
-                  });
-                }
-              }
-
-              // 展示对应的省
-              function showProvince(mapType, name) {
-                //这写省份的js都是通过在线构建工具生成的，保存在本地，需要时加载使用即可，最好不要一开始全部直接引入。
-                if (catches[name]) {
-                  loadMap(name);
-                } else {
-                  catches[mapType] = true;
-
-                  loadBdScript(
-                    "$" + mapType + "JS",
-                    "./js/map/province/" + mapType + ".js",
-                    function () {
-                      loadMap(name);
-                    }
-                  );
-                }
-              }
-
-              // 加载对应的JS
-              function loadBdScript(scriptId, url, callback) {
-                var script = document.createElement("script");
-                script.type = "text/javascript";
-                if (script.readyState) {
-                  //IE
-                  script.onreadystatechange = function () {
-                    if (
-                      script.readyState === "loaded" ||
-                      script.readyState === "complete"
-                    ) {
-                      script.onreadystatechange = null;
-                      callback();
-                    }
-                  };
-                } else {
-                  // Others
-                  script.onload = function () {
-                    callback();
-                  };
-                }
-                script.src = url;
-                script.id = scriptId;
-                document.getElementsByTagName("head")[0].appendChild(script);
-              }
-            </script>
-        </div>
-        <div id="record" style="border:1px solid; width: 500px;height: 300px;">
-          
-        </div>
-    </div> -->
-    <!-- <div class="hidden-text">Lewis的笔记</div> -->
-<!--     <div id="studybook">
-    </div>
-    <div id="pictureDB">
 
     </div>
-    <div class="animation-container">
-      <div class="moving-bar"></div>
-    </div> -->
+    <!-- partial -->
+    <script src='./js/vue.min.js'></script>
+    <script  src="./js/fourBlock.js"></script>
+    <hr />
 
-    <div style="height:2000px;"></div>
+    <h1 class="title">精&nbsp&nbsp选</h1>
+    <div class="container2">
+      <div class="card-column column-0">
+        <div class="card card-color-0">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg" />
+          <h1>Hey now, you're an allstar</h1>
+        </div>
+        <div class="card card-color-2">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg" />
+          <h1>Hey now, you're a rock star</h1>
+        </div>
+      </div>
+      <div class="card-column column-1">
+        <div class="card card-color-1">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
+          <h1>Get your game on, go play</h1>
+        </div>
+        <div class="card card-color-3">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
+          <h1>Get the show on, get paid</h1>
+        </div>
+      </div>
+      <div class="card-column column-0">
+        <div class="card card-color-0">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
+          <h1>Get your game on, go play</h1>
+        </div>
+        <div class="card card-color-2">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
+          <h1>Get the show on, get paid</h1>
+        </div>
+      </div>
+      <div class="card-column column-0">
+        <div class="card card-color-0">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg" />
+          <h1>Hey now, you're an allstar</h1>
+        </div>
+        <div class="card card-color-2">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg" />
+          <h1>Hey now, you're a rock star</h1>
+        </div>
+      </div>
+      <div class="card-column column-1">
+        <div class="card card-color-1">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
+          <h1>Get your game on, go play</h1>
+        </div>
+        <div class="card card-color-3">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
+          <h1>Get the show on, get paid</h1>
+        </div>
+      </div>
+      <div class="card-column column-0">
+        <div class="card card-color-0">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
+          <h1>Get your game on, go play</h1>
+        </div>
+        <div class="card card-color-2">
+          <div class="border"></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
+          <h1>Get the show on, get paid</h1>
+        </div>
+      </div>
+
+    </div>
+    <div id="cover" class="cover"></div>
+    <div id="open-content" class="open-content">
+      <a href="#" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
+      <img id="open-content-image" src="" />
+      <div class="text" id="open-content-text">
+      </div>
+    </div>
+<!-- partial -->
+  <script  src="./js/exhibit.js"></script>
 </body>
+</html>
