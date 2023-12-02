@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Parallax Depth Cards</title>
+    <!-- 四个格子 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> Playfair+Display:700|Raleway:500.700'> -->
+    <link rel="stylesheet" href="./css/reset.min.css"> 
+    <link rel='stylesheet' href='./css/fonts_googleapis_com.css'>
+    <link rel="stylesheet" href="./css/fourBlock.css">
+    <!-- 夜间模式 -->
+    <link rel="stylesheet" href="css\adjestMode.css">
+    <!-- 地图模块 -->
+    <link rel="stylesheet" href="css\mapblock.css">
+
+    <script type="text/javascript" src="js\fontSet.js"></script>
+    <script src="js\adjestMode.js"></script>
+    <!-- // <script src="js\mapJS.js"></script> -->
+</head>
+<body style="background-color: rgb(255, 255, 224);color:rgb(0, 0, 0);">
+    <div id="adjestMode" style="display:flex;">
+    	<div id="modeButton" onclick="exchange()" style="background-color: #6cf;">
+    		<div id="light" style="background-color: #FFD700;">
+    		</div>
+    	</div>
+    </div>
+    <div style="height:100px;"></div>
+      <!-- 4个格子 -->
+    <h1 class="title">Hover over the cards</h1>
+    <div id="app" class="container1">
+      <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+        <h1 slot="header">Canyons</h1>
+        <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </card>
+      <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+        <h1 slot="header">Beaches</h1>
+        <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </card>
+      <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+        <h1 slot="header">Trees</h1>
+        <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </card>
+      <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+        <h1 slot="header">Lakes</h1>
+        <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </card>
+    </div>
+    <!-- partial -->
+    <script src='./js/vue.min.js'></script>
+    <script  src="./js/fourBlock.js"></script>
+    <hr />
+      
+</body>
+</html>
