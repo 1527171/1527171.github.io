@@ -1,36 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<!-- 夜间模式 -->
+    <meta charset="UTF-8">
+    <title>景&nbsp彡</title>
+    <!-- 夜间模式 -->
     <link rel="stylesheet" href="css\adjestMode.css">
+    <style>
+		.row{justify-content:center;}
+	</style>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="./css/owl.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body style="background-color: rgb(255, 255, 224);color:rgb(0, 0, 0);">
 
-    <div id="handBlock" style="background-color:black;height:60px;width:100%;position: fixed;z-index:9;">
-        <script src="js\adjestMode.js"></script>
-        <div id="adjestMode" style="display:flex;">
-            <div id="modeButton" onclick="exchange()" style="background-color: #6cf;">
-                <div id="light" style="background-color: #FFD700;">
+<div id="handBlock" style="background-color:black;height:60px;width:100%;position: fixed;z-index:9;">
+    <script src="js\adjestMode.js"></script>
+    <div id="adjestMode" style="display:flex;">
+        <div id="modeButton" onclick="exchange()" style="background-color: #6cf;">
+            <div id="light" style="background-color: #FFD700;">
+            </div>
+        </div>
+    </div>
+    <script>
+			// console.log(document.body.backgroundColor);
+
+			// 获取当前页面URL中的查询参数
+			var urlParams = new URLSearchParams(window.location.search);
+			// 使用get()方法获取特定参数的值
+			var modParam = urlParams.get('mod');
+			// 使用modParam的值进行逻辑处理
+			if (modParam === 'true') {
+			} else {
+				exchange();
+			}
+		</script>
+</div>
+
+<!-- ***** Preloader Start ***** -->
+<div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** 主横幅区域开始 ***** -->
+<section id="section-1">
+    <div class="content-slider">
+        <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+        <input type="radio" id="banner2" class="sec-1-input" name="banner">
+        <input type="radio" id="banner3" class="sec-1-input" name="banner">
+        <input type="radio" id="banner4" class="sec-1-input" name="banner">
+        <div class="slider">
+            <div id="top-banner-1" class="banner">
+                <div class="banner-inner-wrapper header-text">
+                    <div class="main-caption">
+                        <h2>索 尼 世 界 摄 影 奖:</h2>
+                        <h1>《朝圣者与信徒走过浮桥》</h1>
+                        <div class="border-button"><a href="http://jiaren.org/2014/03/24/suoni-2014/">Go There</a></div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="more-info">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-user"></i>
+                                            <h4><span>Population:</span><br>44.48 M</h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-globe"></i>
+                                            <h4><span>Territory:</span><br>275.400 KM<em>2</em></h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-home"></i>
+                                            <h4><span>AVG Price:</span><br>$946.000</h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <div class="main-button">
+                                                <a href="http://jiaren.org/2014/03/24/suoni-2014/">Explore More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="top-banner-2" class="banner">
+                <div class="banner-inner-wrapper header-text">
+                    <div class="main-caption">
+                        <h2>综 合 摄 影 大 奖:</h2>
+                        <h1>《闪 现》</h1>
+                        <div class="border-button"><a href="http://www.cphoto.net/article-193692-1.html">Go There</a></div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="more-info">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-user"></i>
+                                            <h4><span>Population:</span><br>8.66 M</h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-globe"></i>
+                                            <h4><span>Territory:</span><br>41.290 KM<em>2</em></h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-home"></i>
+                                            <h4><span>AVG Price:</span><br>$1.100.200</h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <div class="main-button">
+                                                <a href="http://www.cphoto.net/article-193692-1.html">Explore More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="top-banner-3" class="banner">
+                <div class="banner-inner-wrapper header-text">
+                    <div class="main-caption">
+                        <h2>索 尼 世 界 摄 影 奖 国 家 奖:</h2>
+                        <h1>《水下食蟹海豹》</h1>
+                        <div class="border-button"><a href="https://zhuanlan.zhihu.com/p/112946813">Go There</a></div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="more-info">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-user"></i>
+                                            <h4><span>Population:</span><br>67.41 M</h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-globe"></i>
+                                            <h4><span>Territory:</span><br>551.500 KM<em>2</em></h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-home"></i>
+                                            <h4><span>AVG Price:</span><br>$425.600</h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <div class="main-button">
+                                                <a href="https://zhuanlan.zhihu.com/p/112946813">Explore More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="top-banner-4" class="banner">
+                <div class="banner-inner-wrapper header-text">
+                    <div class="main-caption">
+                        <h2>肖 像 类 冠 军，年 度 摄 影 师:</h2>
+                        <h1>Adam Ferguson</h1>
+                        <div class="border-button"><a href="https://www.worldphoto.org/team-profile/adam-ferguson-australia">Go There</a></div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="more-info">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-user"></i>
+                                            <h4><span>Population:</span><br>69.86 M</h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-globe"></i>
+                                            <h4><span>Territory:</span><br>513.120 KM<em>2</em></h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <i class="fa fa-home"></i>
+                                            <h4><span>AVG Price:</span><br>$165.450</h4>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-6">
+                                            <div class="main-button">
+                                                <a href="https://www.worldphoto.org/team-profile/adam-ferguson-australia">Explore More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="controls">
+                <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">1</span></label>
+                <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">2</span></label>
+                <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">3</span></label>
+                <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">4</span></label>
+            </div>
+        </nav>
+    </div>
+</section>
+<!-- ***** 主横幅区域结束 ***** -->
+
+<div class="visit-country">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="section-heading">
+                    <h2 style="text-align:center;">摄影家与他们的故事</h2>
+                    <p>"当结束回到起点时，我知道光明是真实的。"</p>
+                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp用相机记录历史，在瞬间冻结历史，使瞬间永恒。 摄影从它出现的那一刻起就赋予了它记录的使命。 对于喜欢摄影的人来说，摄影的意义在于拍摄美丽的事物并与大家分享，从而让生活变得更好。</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="items">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="./Data/pictures/Photographer/Ashraful Arefin.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>Ashraful Arefi</h4>
+                                            <span>Europe</span>
+                                            <div class="main-button">
+                                                <a href="about.html">了解 更多</a>
+                                            </div>
+                                            <p>Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                <li><i class="fa fa-home"></i> $1.100.200</li>
+                                            </ul>
+                                            <div class="text-button" style="color:darkseagreen;">
+                                                19020 人观看
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="./Data/pictures/Photographer/Ashraful Arefin.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>Ashraful Arefi</h4>
+                                            <span>Europe</span>
+                                            <div class="main-button">
+                                                <a href="about.html">了解 更多</a>
+                                            </div>
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                <li><i class="fa fa-home"></i> $1.100.200</li>
+                                            </ul>
+                                            <div class="text-button" style="color:darkseagreen;">
+                                                19020 人观看
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="./Data/pictures/Photographer/Ashraful Arefin.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>Ashraful Arefi</h4>
+                                            <span>Europe</span>
+                                            <div class="main-button">
+                                                <a href="about.html">了解 更多</a>
+                                            </div>
+                                            <p>Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                <li><i class="fa fa-home"></i> $1.100.200</li>
+                                            </ul>
+                                            <div class="text-button" style="color:darkseagreen;">
+                                                19020 人观看
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="./Data/pictures/Photographer/Ashraful Arefin.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>Ashraful Arefi</h4>
+                                            <span>Europe</span>
+                                            <div class="main-button">
+                                                <a href="about.html">了解 更多</a>
+                                            </div>
+                                            <p>Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                <li><i class="fa fa-home"></i> $1.100.200</li>
+                                            </ul>
+                                            <div class="text-button" style="color:darkseagreen;">
+                                                19020 人观看
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="./Data/pictures/Photographer/Ashraful Arefin.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>Ashraful Arefi</h4>
+                                            <span>Europe</span>
+                                            <div class="main-button">
+                                                <a href="about.html">了解 更多</a>
+                                            </div>
+                                            <p>Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                <li><i class="fa fa-home"></i> $1.100.200</li>
+                                            </ul>
+                                            <div class="text-button" style="color:darkseagreen;">
+                                                19020 人观看
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="./Data/pictures/Photographer/Ashraful Arefin.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>Ashraful Arefi</h4>
+                                            <span>Europe</span>
+                                            <div class="main-button">
+                                                <a href="about.html">了解 更多</a>
+                                            </div>
+                                            <p>Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                <li><i class="fa fa-home"></i> $1.100.200</li>
+                                            </ul>
+                                            <div class="text-button" style="color:darkseagreen;">
+                                                19020 人观看
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="./Data/pictures/Photographer/Ashraful Arefin.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>Ashraful Arefi</h4>
+                                            <span>Europe</span>
+                                            <div class="main-button">
+                                                <a href="about.html">了解 更多</a>
+                                            </div>
+                                            <p>Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                <li><i class="fa fa-home"></i> $1.100.200</li>
+                                            </ul>
+                                            <div class="text-button" style="color:darkseagreen;">
+                                                19020 人观看
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="item last-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="./Data/pictures/Photographer/厉新华.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>厉 新 华</h4>
+                                            <span>Europe</span>
+                                            <div class="main-button">
+                                                <a href="about.html">Explore More</a>
+                                            </div>
+                                            <p>We hope this WoOx template is useful for you, please support us a <a href="https://paypal.me/templatemo" target="_blank">small amount of PayPal</a> to info [at] templatemo.com for our survival. We really appreciate your contribution.</p>
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> 67.41 Mil People</li>
+                                                <li><i class="fa fa-globe"></i> 551.500 km2</li>
+                                                <li><i class="fa fa-home"></i> $425.600</li>
+                                            </ul>
+                                            <div class="text-button">
+                                                <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-	<script>
-		// console.log(document.body.backgroundColor);
+</div>
+<!-- Scripts -->
+<!--  -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 
-		// 获取当前页面URL中的查询参数
-		var urlParams = new URLSearchParams(window.location.search);
+<script src="./js/isotope.min.js"></script>
+<script src="./js/owl-carousel.js"></script>
+<!-- // <script src="./js/wow.js"></script> -->
+<script src="./js/tabs.js"></script>
+<script src="./js/popup.js"></script>
+<script src="./js/custom.js"></script>
 
-		// 使用get()方法获取特定参数的值
-		var modParam = urlParams.get('mod');
+<script>
+	    function bannerSwitcher() {
+	      next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+	      if (next.length) next.prop('checked', true);
+	      else $('.sec-1-input').first().prop('checked', true);
+	    }
 
-		// 使用modParam的值进行逻辑处理
-		if (modParam === 'true') {
-		} else {
-			exchange();
-		}
-	</script>
+	    var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+	    $('nav .controls label').click(function() {
+	      clearInterval(bannerTimer);
+	      bannerTimer = setInterval(bannerSwitcher, 5000)
+	    });
+	  </script>
+
+
 </body>
 </html>
