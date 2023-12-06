@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Character Responsive HTML5 Template</title>
+  <!--
+  Template 2110 Character
+  http://www.tooplate.com/view/2110-character
+  -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- https://fonts.google.com/specimen/Open+Sans -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- https://fontawesome.com/ -->
+  <link rel="stylesheet" href="css/tooplate-style.css">
+</head>
+
+<body class="tm-bg-dark" id="tm-bg-dark">
+<main class="tm-container masonry">
+  <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+    <p class="tm-hero-text">
+      本次展出的这一系列作品，没有看到作品的标题，为此问及郑培书解释说，
+      不设标题，是为了使观者的想象力有更大的发挥空间，可以带来更多思索与美感激荡，更是为期望与摄影同好交流的重要方式。
+    </p>
+    <header class="tm-block-brand">
+      <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+        <i class="fas fa-braille fa-3x"></i>
+        <h1 class="tm-brand-name">《无 题》</h1>
+      </div>
+    </header>
+  </div>
+  <div class="item" data-desktop-seq-no="4" data-mobile-seq-no="8">
+    <img src="./data/photographer/img/郑培书-02.jpeg" alt="Image" class="tm-img-left">
+  </div>
+  <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+    <p class="tm-hero-text">
+      老人的照片，既可以激发对人世沧桑的感慨，也可能激起对生命力量的感佩，
+      又或者会唤醒一双双发现生活之美的眼睛。生活中习以为常的人事物，如果用新鲜的眼光去观察，常常会有意外的收获。
+    </p>
+    <header class="tm-block-brand">
+      <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+        <i class="fas fa-braille fa-3x"></i>
+        <h1 class="tm-brand-name">《无 题》</h1>
+      </div>
+    </header>
+  </div>
+  <div class="item" data-desktop-seq-no="2" data-mobile-seq-no="4">
+    <img src="./data/photographer/img/郑培书-01.jpeg" alt="Image" class="tm-img-left">
+  </div>
+
+
+  <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
+    <div class="tm-form-container tm-block-pad tm-pb-0">
+      <header>
+        <h2 class="tm-text-uppercase tm-text-gray-light tm-mb">
+          郑培书长期关注亚洲老龄化的实况，多次走访各国城乡，拍摄了一系列聚焦老年人的作品，
+          呈现时光在银发族身上留下的痕迹，展现了银色年华的美丽与力量。
+        </h2>
+      </header>
+    </div>
+    <div class="tm-form-section-tag" style="">
+      <div class="tm-bg-secondary tm-text-white tm-block-pad tm-form-section-tag-inner">
+        <header>
+          <h2>郑 培 书</h2>
+        </header>
+        <p></p>
+      </div>
+    </div>
+    <div class="item" data-desktop-seq-no="8" data-mobile-seq-no="6">
+      <img src="./data/photographer/img/郑培书-03.jpeg" alt="Image">
+    </div>
+  </div>
+
+  <div class="item tm-block-right" data-desktop-seq-no="7" data-mobile-seq-no="3">
+    <div class="tm-block-right-inner tm-bg-primary-light tm-text-white tm-block tm-block-wider tm-block-pad">
+      <header>
+        <h2 class="tm-text-uppercase">
+        </h2>
+      </header>
+      <p class="tm-mt tm-mb-small">
+        老人们富于韧性、持续绽放的生命力，使银色的年华在时光的琢磨中更为闪耀，而郑培书的摄影，也由于饱含对生命的热忱，将这些动人的片刻，
+        同时赋予了人文关怀与经典隽永之美。多重交织的意义，透过有意识的布展呈现，将郑培书追求经典与质感的人文情怀，细腻地感染着每位观者的艺术心灵。
+      </p>
+      <!-- -->
+    </div>
+  </div>
+  <div class="item" data-desktop-seq-no="6" data-mobile-seq-no="2">
+    <img src="./data/photographer/img/郑培书-04.jpeg" alt="Image">
+  </div>
+
+
+
+</main>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script>
+
+        let callAdjustLayout;
+        let currentLayout = "desktop",
+            nextLayout = "desktop";
+
+        /**
+         * detect IE
+         * returns version of IE or false, if browser is not Internet Explorer
+         */
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+
+            var msie = ua.indexOf('MSIE ');
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            }
+
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                // IE 11 => return version number
+                var rv = ua.indexOf('rv:');
+                return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+
+            var edge = ua.indexOf('Edge/');
+            if (edge > 0) {
+                // Edge (IE 12+) => return version number
+                return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            }
+
+            // other browser
+            return false;
+        }
+
+        // Adjust layout based on the browser width
+        function adjustLayout() {
+            let block1, block2, block3, block4, block5, block6, block7, block8, block9;
+
+            if (window.innerWidth <= 1199) {
+                // Mobile layout
+                nextLayout = "mobile";
+                block1 = $("div[data-mobile-seq-no='1']");
+                block2 = $("div[data-mobile-seq-no='2']");
+                block3 = $("div[data-mobile-seq-no='3']");
+                block4 = $("div[data-mobile-seq-no='4']");
+                block5 = $("div[data-mobile-seq-no='5']");
+                block6 = $("div[data-mobile-seq-no='6']");
+                block7 = $("div[data-mobile-seq-no='7']");
+                block8 = $("div[data-mobile-seq-no='8']");
+                block9 = $("div[data-mobile-seq-no='9']");
+            } else {
+                // Desktop layout
+                nextLayout = "desktop";
+                block1 = $("div[data-desktop-seq-no='1']");
+                block2 = $("div[data-desktop-seq-no='2']");
+                block3 = $("div[data-desktop-seq-no='3']");
+                block4 = $("div[data-desktop-seq-no='4']");
+                block5 = $("div[data-desktop-seq-no='5']");
+                block6 = $("div[data-desktop-seq-no='6']");
+                block7 = $("div[data-desktop-seq-no='7']");
+                block8 = $("div[data-desktop-seq-no='8']");
+                block9 = $("div[data-desktop-seq-no='9']");
+            }
+
+            if (nextLayout !== currentLayout) {
+                // Reorder blocks based on their seq no
+                block1.after(block2.detach());
+                block2.after(block3.detach());
+                block3.after(block4.detach());
+                block4.after(block5.detach());
+                block5.after(block6.detach());
+                block6.after(block7.detach());
+                block7.after(block8.detach());
+                block8.after(block9.detach());
+                currentLayout = nextLayout;
+            }
+        }
+
+        // Adjust layout upon window resize
+        window.onresize = function () {
+            clearTimeout(callAdjustLayout);
+            callAdjustLayout = setTimeout(adjustLayout, 100);
+        }
+
+        // DOM is ready
+        $(function () {
+            if (detectIE()) {
+                alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
+            }
+
+            adjustLayout();
+        })
+    </script>
+
+</body>
+</html>

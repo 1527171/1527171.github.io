@@ -1,0 +1,188 @@
+<main class="tm-container masonry">
+  <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+    <p class="tm-hero-text">
+      这幅照片拍下了在炎热干燥的夏天，一个小孩子喂口渴的牛犊喝水的场面。
+    </p>
+    <header class="tm-block-brand">
+      <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+        <i class="fas fa-braille fa-3x"></i>
+        <h1 class="tm-brand-name">《Thirsty calf》</h1>
+      </div>
+    </header>
+  </div>
+  <div class="item" data-desktop-seq-no="2" data-mobile-seq-no="4">
+    <img src="./data/animal/img/2018-2023 获奖作品-01.jpeg" alt="Image" class="tm-img-left">
+  </div>
+  <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+    <p class="tm-hero-text">
+      我们将它们列为“野生动物”，觉得它们是一个与我们人类没有任何交点的遥远的物种。然而，经过长期观察它们，你会觉得其实它们就是和我们人类生活在同一片“大自然”下的“邻居”。
+    </p>
+    <header class="tm-block-brand">
+      <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+        <i class="fas fa-braille fa-3x"></i>
+        <h1 class="tm-brand-name">《変わりゆく世界で》</h1>
+      </div>
+    </header>
+  </div>
+  <div class="item" data-desktop-seq-no="4" data-mobile-seq-no="8">
+    <img src="./data/animal/img/2018-2023 获奖作品-04.jpeg" alt="Image" class="tm-img-left">
+  </div>
+
+  <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
+    <div class="tm-form-container tm-block-pad tm-pb-0">
+      <header>
+        <h2 class="tm-text-uppercase tm-text-gray-light tm-mb">
+          这组照片是我正在进行的一个拍摄项目，它让我思考了生命和时间的意义，让我更加热爱生活，热爱生命，并将其转化为拍摄的源动力……
+        </h2>
+      </header>
+    </div>
+    <div class="tm-form-section-tag" style="">
+      <div class="tm-bg-secondary tm-text-white tm-block-pad tm-form-section-tag-inner">
+        <header>
+          <h2>《未来——尘世》</h2>
+        </header>
+        <p></p>
+      </div>
+    </div>
+    <div class="item" data-desktop-seq-no="8" data-mobile-seq-no="6">
+      <img src="./data/animal/img/2018-2023 获奖作品-02.jpeg" alt="Image">
+    </div>
+  </div>
+  <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
+    <div class="tm-form-container tm-block-pad tm-pb-0">
+      <header>
+        <h2 class="tm-text-uppercase tm-text-gray-light tm-mb">
+          他们也会有兄弟之间的争吵，或向妈妈撒娇，又或者会闻一闻风的味道。
+        </h2>
+      </header>
+    </div>
+    <div class="tm-form-section-tag" style="">
+      <div class="tm-bg-secondary tm-text-white tm-block-pad tm-form-section-tag-inner">
+        <header>
+          <h2>《鸡上枝头》</h2>
+        </header>
+        <p></p>
+      </div>
+    </div>
+    <div class="item" data-desktop-seq-no="8" data-mobile-seq-no="6">
+      <img src="./data/animal/img/2018-2023 获奖作品-03.jpeg" alt="Image">
+    </div>
+  </div>
+<!--  <div class="item tm-block-right" data-desktop-seq-no="7" data-mobile-seq-no="3">-->
+<!--    <div class="tm-block-right-inner tm-bg-primary-light tm-text-white tm-block tm-block-wider tm-block-pad">-->
+<!--      <header>-->
+<!--        <h2 class="tm-text-uppercase">-->
+<!--        </h2>-->
+<!--      </header>-->
+<!--      <p class="tm-mt tm-mb-small">-->
+<!--        “我一生只做一件事，那就是摄影。”周向阳用镜头记录着一切，感受着岁月的变迁。无论是通过精神文明建设实现人民群众精神生活富足，-->
+<!--        还是增强人民幸福感、获得感、安全感，抑或是弘扬优秀传统文化，-->
+<!--        周向阳都在以他的执着与不懈、数十年如一日的创作激情，为用好文化力量推动共同富裕示范区建设贡献着自己独有的力量。-->
+<!--      </p>-->
+<!--      &lt;!&ndash; &ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="item" data-desktop-seq-no="6" data-mobile-seq-no="2">-->
+<!--    <img src="./data/animal/img/周向阳-04.jpeg" alt="Image">-->
+<!--  </div>-->
+
+
+
+</main>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script>
+
+        let callAdjustLayout;
+        let currentLayout = "desktop",
+            nextLayout = "desktop";
+
+        /**
+         * detect IE
+         * returns version of IE or false, if browser is not Internet Explorer
+         */
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+
+            var msie = ua.indexOf('MSIE ');
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            }
+
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                // IE 11 => return version number
+                var rv = ua.indexOf('rv:');
+                return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+
+            var edge = ua.indexOf('Edge/');
+            if (edge > 0) {
+                // Edge (IE 12+) => return version number
+                return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            }
+
+            // other browser
+            return false;
+        }
+
+        // Adjust layout based on the browser width
+        function adjustLayout() {
+            let block1, block2, block3, block4, block5, block6, block7, block8, block9;
+
+            if (window.innerWidth <= 1199) {
+                // Mobile layout
+                nextLayout = "mobile";
+                block1 = $("div[data-mobile-seq-no='1']");
+                block2 = $("div[data-mobile-seq-no='2']");
+                block3 = $("div[data-mobile-seq-no='3']");
+                block4 = $("div[data-mobile-seq-no='4']");
+                block5 = $("div[data-mobile-seq-no='5']");
+                block6 = $("div[data-mobile-seq-no='6']");
+                block7 = $("div[data-mobile-seq-no='7']");
+                block8 = $("div[data-mobile-seq-no='8']");
+                block9 = $("div[data-mobile-seq-no='9']");
+            } else {
+                // Desktop layout
+                nextLayout = "desktop";
+                block1 = $("div[data-desktop-seq-no='1']");
+                block2 = $("div[data-desktop-seq-no='2']");
+                block3 = $("div[data-desktop-seq-no='3']");
+                block4 = $("div[data-desktop-seq-no='4']");
+                block5 = $("div[data-desktop-seq-no='5']");
+                block6 = $("div[data-desktop-seq-no='6']");
+                block7 = $("div[data-desktop-seq-no='7']");
+                block8 = $("div[data-desktop-seq-no='8']");
+                block9 = $("div[data-desktop-seq-no='9']");
+            }
+
+            if (nextLayout !== currentLayout) {
+                // Reorder blocks based on their seq no
+                block1.after(block2.detach());
+                block2.after(block3.detach());
+                block3.after(block4.detach());
+                block4.after(block5.detach());
+                block5.after(block6.detach());
+                block6.after(block7.detach());
+                block7.after(block8.detach());
+                block8.after(block9.detach());
+                currentLayout = nextLayout;
+            }
+        }
+
+        // Adjust layout upon window resize
+        window.onresize = function () {
+            clearTimeout(callAdjustLayout);
+            callAdjustLayout = setTimeout(adjustLayout, 100);
+        }
+
+        // DOM is ready
+        $(function () {
+            if (detectIE()) {
+                alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
+            }
+
+            adjustLayout();
+        })
+    </script>

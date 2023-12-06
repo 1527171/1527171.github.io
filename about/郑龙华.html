@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Character Responsive HTML5 Template</title>
+  <!--
+  Template 2110 Character
+  http://www.tooplate.com/view/2110-character
+  -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- https://fonts.google.com/specimen/Open+Sans -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- https://fontawesome.com/ -->
+  <link rel="stylesheet" href="css/tooplate-style.css">
+</head>
+
+<body class="tm-bg-dark" id="tm-bg-dark">
+<main class="tm-container masonry">
+  <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+    <p class="tm-hero-text">
+      没有手指，最难对付的是调节焦距，只能左手托住相机，右手肉团挤压旋钮，靠摩擦力转动对焦钮。
+      因为带着护具会影响拍摄手感，所以摩擦让我手上的皮破了一层又一层。
+
+    </p>
+    <header class="tm-block-brand">
+      <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+        <i class="fas fa-braille fa-3x"></i>
+        <h1 class="tm-brand-name">《乡村的故事》</h1>
+      </div>
+    </header>
+  </div>
+  <div class="item" data-desktop-seq-no="4" data-mobile-seq-no="8">
+    <img src="./data/photographer/img/郑龙华-01.jpeg" alt="Image" class="tm-img-left">
+  </div>
+  <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+    <p class="tm-hero-text">
+      尤其是需要将手浸在显影水里冲印照片的时候，那种撕心裂肺的疼痛感让我面色苍白，头冒冷汗，我始终坚持在这样的疼痛中打磨和锤炼摄影技术。
+    </p>
+    <header class="tm-block-brand">
+      <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+        <i class="fas fa-braille fa-3x"></i>
+        <h1 class="tm-brand-name">《光 韵》</h1>
+      </div>
+    </header>
+  </div>
+  <div class="item" data-desktop-seq-no="2" data-mobile-seq-no="4">
+    <img src="./data/photographer/img/郑龙华-02.jpeg" alt="Image" class="tm-img-left">
+  </div>
+
+  <div class="item" data-desktop-seq-no="8" data-mobile-seq-no="6">
+    <img src="./data/photographer/img/郑龙华-03.jpeg" alt="Image">
+  </div>
+  <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
+    <div class="tm-form-container tm-block-pad tm-pb-0">
+      <header>
+        <h2 class="tm-text-uppercase tm-text-gray-light tm-mb">
+          有一年乡文化站招人，面试的负责人说了一句“他又不能拍照”就把我拒之门外。
+          那个时候我对自己说，越是否定我，我越是想要试试，我要学习拍照，要让大家都看到，没了双手，我也可以举起相机，记录美好。
+        </h2>
+      </header>
+    </div>
+    <div class="tm-form-section-tag" style="">
+      <div class="tm-bg-secondary tm-text-white tm-block-pad tm-form-section-tag-inner">
+        <header>
+          <h2>郑 龙 华</h2>
+        </header>
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="item" data-desktop-seq-no="6" data-mobile-seq-no="2">
+    <img src="./data/photographer/img/郑龙华-04.jpeg" alt="Image">
+  </div>
+  <div class="item tm-block-right" data-desktop-seq-no="7" data-mobile-seq-no="3">
+    <div class="tm-block-right-inner tm-bg-primary-light tm-text-white tm-block tm-block-wider tm-block-pad">
+      <header>
+        <h2 class="tm-text-uppercase">
+        </h2>
+      </header>
+      <p class="tm-mt tm-mb-small">
+        手上的伤痕和痛楚是摄影带给我最初的“痕迹”，这些痕迹都印证着我的摄影技术在不断精进。
+        每年我都会抽出时间，走遍祖国大江南北，去往海外山川峡谷采风，我的摄影之路一发不可收拾。
+      </p>
+      <!-- -->
+    </div>
+  </div>
+
+
+
+
+</main>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script>
+
+        let callAdjustLayout;
+        let currentLayout = "desktop",
+            nextLayout = "desktop";
+
+        /**
+         * detect IE
+         * returns version of IE or false, if browser is not Internet Explorer
+         */
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+
+            var msie = ua.indexOf('MSIE ');
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            }
+
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                // IE 11 => return version number
+                var rv = ua.indexOf('rv:');
+                return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+
+            var edge = ua.indexOf('Edge/');
+            if (edge > 0) {
+                // Edge (IE 12+) => return version number
+                return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            }
+
+            // other browser
+            return false;
+        }
+
+        // Adjust layout based on the browser width
+        function adjustLayout() {
+            let block1, block2, block3, block4, block5, block6, block7, block8, block9;
+
+            if (window.innerWidth <= 1199) {
+                // Mobile layout
+                nextLayout = "mobile";
+                block1 = $("div[data-mobile-seq-no='1']");
+                block2 = $("div[data-mobile-seq-no='2']");
+                block3 = $("div[data-mobile-seq-no='3']");
+                block4 = $("div[data-mobile-seq-no='4']");
+                block5 = $("div[data-mobile-seq-no='5']");
+                block6 = $("div[data-mobile-seq-no='6']");
+                block7 = $("div[data-mobile-seq-no='7']");
+                block8 = $("div[data-mobile-seq-no='8']");
+                block9 = $("div[data-mobile-seq-no='9']");
+            } else {
+                // Desktop layout
+                nextLayout = "desktop";
+                block1 = $("div[data-desktop-seq-no='1']");
+                block2 = $("div[data-desktop-seq-no='2']");
+                block3 = $("div[data-desktop-seq-no='3']");
+                block4 = $("div[data-desktop-seq-no='4']");
+                block5 = $("div[data-desktop-seq-no='5']");
+                block6 = $("div[data-desktop-seq-no='6']");
+                block7 = $("div[data-desktop-seq-no='7']");
+                block8 = $("div[data-desktop-seq-no='8']");
+                block9 = $("div[data-desktop-seq-no='9']");
+            }
+
+            if (nextLayout !== currentLayout) {
+                // Reorder blocks based on their seq no
+                block1.after(block2.detach());
+                block2.after(block3.detach());
+                block3.after(block4.detach());
+                block4.after(block5.detach());
+                block5.after(block6.detach());
+                block6.after(block7.detach());
+                block7.after(block8.detach());
+                block8.after(block9.detach());
+                currentLayout = nextLayout;
+            }
+        }
+
+        // Adjust layout upon window resize
+        window.onresize = function () {
+            clearTimeout(callAdjustLayout);
+            callAdjustLayout = setTimeout(adjustLayout, 100);
+        }
+
+        // DOM is ready
+        $(function () {
+            if (detectIE()) {
+                alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
+            }
+
+            adjustLayout();
+        })
+    </script>
+
+</body>
+</html>

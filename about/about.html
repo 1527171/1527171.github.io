@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Character Responsive HTML5 Template</title>
+    <!--
+    Template 2110 Character
+    http://www.tooplate.com/view/2110-character
+    -->
+    <link rel="stylesheet" href="./css/fonts.css">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="./css/tooplate-style.css">
+</head>
+
+<body class="tm-bg-dark" id="tm-bg-dark">
+    <script>
+    	// 获取当前页面URL中的查询参数
+        var url = new URLSearchParams(window.location.search);
+		// 使用get()方法获取特定参数的值
+		var name = url.get('name');
+		var id = url.get('id');
+		var dic = {'1':'human',2:'scenery','3':'animal','4':'photographer'}
+        // 使用JavaScript读取txt文件中的内容
+        console.log('./data/'+dic[id]+'/inf/'+name.substring()+'.txt')
+        fetch('./data/'+dic[id]+'/inf/'+name.substring()+'.txt')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('tm-bg-dark').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
+
+

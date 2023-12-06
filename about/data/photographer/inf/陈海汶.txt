@@ -1,0 +1,168 @@
+
+<main class="tm-container masonry">
+    <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+        <p class="tm-hero-text">当时黄山房间很紧张，我在黄山就遇到了一对住不起宾馆的度蜜月的夫妇。我记得那晚我起来，经过玉屏楼的一个很小的小厅时，有个长板凳，长板凳上就是这对男女相拥而眠。安静啊，长板凳上挂了一幅黄山风景照。昏暗的灯光下画面美极了。当时什么都想不到了，就想用摄影把这样的画面表现下来。</p>
+        <header class="tm-block-brand">
+            <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+                <i class="fas fa-braille fa-3x"></i>
+                <h1 class="tm-brand-name">《蜜月的梦》</h1>
+            </div>
+        </header>
+    </div>
+    <div class="item" data-desktop-seq-no="2" data-mobile-seq-no="4">
+        <img src="./data/photographer/img/陈海汶-01.jpeg" alt="Image" class="tm-img-left">
+    </div>
+    <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+        <p class="tm-hero-text">《外滩》他以电影拍摄的技术规格，将外滩建筑内曾经的功能和情景予以再现：从银行大厅的人来人往到豪华酒店的人声鼎沸，从俱乐部的觥筹交错到高档餐厅的华丽晚餐……一如美国摄影家格里高利•克鲁德森作品中充满戏剧性的场面铺陈和复杂调度，陈海汶打造的“图片电影”生动地将上海外滩的故事变成了可视化、可触摸的“现实”。
+        </p>
+        <header class="tm-block-brand">
+            <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+                <i class="fas fa-braille fa-3x"></i>
+                <h1 class="tm-brand-name">《外 滩》</h1>
+            </div>
+        </header>
+    </div>
+    <div class="item" data-desktop-seq-no="4" data-mobile-seq-no="8">
+        <img src="./data/photographer/img/陈海汶-02.jpeg" alt="Image" class="tm-img-left">
+    </div>
+    <div class="item" data-desktop-seq-no="8" data-mobile-seq-no="6">
+        <img src="./data/photographer/img/陈海汶-04.jpeg" alt="Image">
+    </div>
+    <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
+        <div class="tm-form-container tm-block-pad tm-pb-0">
+            <header>
+                <h2 class="tm-text-uppercase tm-text-gray-light tm-mb">
+                    从劳动人民家庭出生买不起相机的穷小孩，到创办上海老相机制造博物馆。
+                    从百上黄山学习摄影创作，到连续两届荣获中国最高摄影奖项金像奖。
+                    从为摄影下海的普通经营者，到连任两届上海政协委员，做自己喜欢的事贯穿着多年摄影文化事业的开拓与良知经营。
+                    摄影对于他而言就是生活全部的演绎。
+                </h2>
+            </header>
+        </div>
+        <div class="tm-form-section-tag" style="">
+            <div class="tm-bg-secondary tm-text-white tm-block-pad tm-form-section-tag-inner">
+                <header>
+                    <h2>陈 海 汶</h2>
+                </header>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="item" data-desktop-seq-no="6" data-mobile-seq-no="2">
+        <img src="./data/photographer/img/陈海汶-03.jpeg" alt="Image">
+    </div>
+    <div class="item tm-block-right" data-desktop-seq-no="7" data-mobile-seq-no="3">
+        <div class="tm-block-right-inner tm-bg-primary-light tm-text-white tm-block tm-block-wider tm-block-pad">
+            <header>
+                <h2 class="tm-text-uppercase">
+                    《思南公馆》
+                </h2>
+            </header>
+            <p class="tm-mt tm-mb-small">
+                从《思南公馆》为了找寻思南公馆建筑风貌的源头，陈海汶专程前往法国的比亚里茨，观察那里的建筑与思南公馆之间的设计纽带，同时以闯入者的姿态对生活在思南公馆和比亚里茨老洋房里的人们进行纪实性的拍摄。
+            </p>
+            <!-- -->
+        </div>
+    </div>
+
+
+
+
+</main>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script>
+
+        let callAdjustLayout;
+        let currentLayout = "desktop",
+            nextLayout = "desktop";
+
+        /**
+         * detect IE
+         * returns version of IE or false, if browser is not Internet Explorer
+         */
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+
+            var msie = ua.indexOf('MSIE ');
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            }
+
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                // IE 11 => return version number
+                var rv = ua.indexOf('rv:');
+                return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+
+            var edge = ua.indexOf('Edge/');
+            if (edge > 0) {
+                // Edge (IE 12+) => return version number
+                return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            }
+
+            // other browser
+            return false;
+        }
+
+        // Adjust layout based on the browser width
+        function adjustLayout() {
+            let block1, block2, block3, block4, block5, block6, block7, block8, block9;
+
+            if (window.innerWidth <= 1199) {
+                // Mobile layout
+                nextLayout = "mobile";
+                block1 = $("div[data-mobile-seq-no='1']");
+                block2 = $("div[data-mobile-seq-no='2']");
+                block3 = $("div[data-mobile-seq-no='3']");
+                block4 = $("div[data-mobile-seq-no='4']");
+                block5 = $("div[data-mobile-seq-no='5']");
+                block6 = $("div[data-mobile-seq-no='6']");
+                block7 = $("div[data-mobile-seq-no='7']");
+                block8 = $("div[data-mobile-seq-no='8']");
+                block9 = $("div[data-mobile-seq-no='9']");
+            } else {
+                // Desktop layout
+                nextLayout = "desktop";
+                block1 = $("div[data-desktop-seq-no='1']");
+                block2 = $("div[data-desktop-seq-no='2']");
+                block3 = $("div[data-desktop-seq-no='3']");
+                block4 = $("div[data-desktop-seq-no='4']");
+                block5 = $("div[data-desktop-seq-no='5']");
+                block6 = $("div[data-desktop-seq-no='6']");
+                block7 = $("div[data-desktop-seq-no='7']");
+                block8 = $("div[data-desktop-seq-no='8']");
+                block9 = $("div[data-desktop-seq-no='9']");
+            }
+
+            if (nextLayout !== currentLayout) {
+                // Reorder blocks based on their seq no
+                block1.after(block2.detach());
+                block2.after(block3.detach());
+                block3.after(block4.detach());
+                block4.after(block5.detach());
+                block5.after(block6.detach());
+                block6.after(block7.detach());
+                block7.after(block8.detach());
+                block8.after(block9.detach());
+                currentLayout = nextLayout;
+            }
+        }
+
+        // Adjust layout upon window resize
+        window.onresize = function () {
+            clearTimeout(callAdjustLayout);
+            callAdjustLayout = setTimeout(adjustLayout, 100);
+        }
+
+        // DOM is ready
+        $(function () {
+            if (detectIE()) {
+                alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
+            }
+
+            adjustLayout();
+        })
+    </script>

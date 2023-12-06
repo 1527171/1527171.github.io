@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Character Responsive HTML5 Template</title>
+  <!--
+  Template 2110 Character
+  http://www.tooplate.com/view/2110-character
+  -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- https://fonts.google.com/specimen/Open+Sans -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- https://fontawesome.com/ -->
+  <link rel="stylesheet" href="css/tooplate-style.css">
+</head>
+
+<body class="tm-bg-dark" id="tm-bg-dark">
+<main class="tm-container masonry">
+  <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+    <p class="tm-hero-text">以“三江六岸”为主线，通过回眸今昔，从古婺的发展巨变一隅，见证身边的翻天覆地巨变，折射感受祖国的繁荣强盛，
+      也谨以此作为一名老党员、一位老文艺工作者向党的献礼，衷心祝福家乡越来越美，衷心祝愿祖国日益昌盛！</p>
+    <header class="tm-block-brand">
+      <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+        <i class="fas fa-braille fa-3x"></i>
+        <h1 class="tm-brand-name">《三江六岸醉春风》</h1>
+      </div>
+    </header>
+  </div>
+  <div class="item" data-desktop-seq-no="2" data-mobile-seq-no="4">
+    <img src="./data/photographer/img/厉新华-01.jpeg" alt="Image" class="tm-img-left">
+  </div>
+  <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+    <p class="tm-hero-text">
+      燕尾洲是一个次生湿地，植被茂盛，不仅是乡土植物的种子资源库、许多动物的栖息地和庇护所，
+      也是多种候鸟的中转站。该区域是中国婺剧院所在地，同时包含了大部分滨江岸线，
+      并紧邻保护湿地，既起到湿地与城市间的过渡作用，也是防汛堤所在区域。
+    </p>
+    <header class="tm-block-brand">
+      <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+        <i class="fas fa-braille fa-3x"></i>
+        <h1 class="tm-brand-name">《燕尾洲》</h1>
+      </div>
+    </header>
+  </div>
+  <div class="item" data-desktop-seq-no="4" data-mobile-seq-no="8">
+    <img src="./data/photographer/img/厉新华-02.jpeg" alt="Image" class="tm-img-left">
+  </div>
+  <div class="item" data-desktop-seq-no="8" data-mobile-seq-no="6">
+    <img src="./data/photographer/img/厉新华-04.jpeg" alt="Image">
+  </div>
+  <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
+    <div class="tm-form-container tm-block-pad tm-pb-0">
+      <header>
+        <h2 class="tm-text-uppercase tm-text-gray-light tm-mb">
+          1952年11月出生于金华，中国共产党党员，金华市文化馆研究馆员，金华市摄影家协会名誉主席，中国摄影家协会德艺双馨优秀会员。
+          曾任浙江省摄影家协会四、五、六届副主席。
+        </h2>
+      </header>
+    </div>
+    <div class="tm-form-section-tag" style="">
+      <div class="tm-bg-secondary tm-text-white tm-block-pad tm-form-section-tag-inner">
+        <header>
+          <h2>厉 新 华</h2>
+        </header>
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="item" data-desktop-seq-no="6" data-mobile-seq-no="2">
+    <img src="./data/photographer/img/厉新华-03.jpeg" alt="Image">
+  </div>
+  <div class="item tm-block-right" data-desktop-seq-no="7" data-mobile-seq-no="3">
+    <div class="tm-block-right-inner tm-bg-primary-light tm-text-white tm-block tm-block-wider tm-block-pad">
+      <header>
+        <h2 class="tm-text-uppercase">
+        </h2>
+      </header>
+      <p class="tm-mt tm-mb-small">
+        义乌江自低田入境，自东而西流经区境中部，沿途接纳航慈溪、孝顺溪、东溪、西溪、山河溪、芗溪、赤松溪诸水后，
+        于城区燕尾洲与自焦岩入境，沿西南边境北流的武义江会合后称金华江，亦称婺江，
+        西流入婺城区。沿着义乌江两岸的江滨绿廊，是金东城区的最美滨水休闲空间。
+      </p>
+      <!-- -->
+    </div>
+  </div>
+
+
+
+
+</main>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script>
+
+        let callAdjustLayout;
+        let currentLayout = "desktop",
+            nextLayout = "desktop";
+
+        /**
+         * detect IE
+         * returns version of IE or false, if browser is not Internet Explorer
+         */
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+
+            var msie = ua.indexOf('MSIE ');
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+            }
+
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                // IE 11 => return version number
+                var rv = ua.indexOf('rv:');
+                return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            }
+
+            var edge = ua.indexOf('Edge/');
+            if (edge > 0) {
+                // Edge (IE 12+) => return version number
+                return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            }
+
+            // other browser
+            return false;
+        }
+
+        // Adjust layout based on the browser width
+        function adjustLayout() {
+            let block1, block2, block3, block4, block5, block6, block7, block8, block9;
+
+            if (window.innerWidth <= 1199) {
+                // Mobile layout
+                nextLayout = "mobile";
+                block1 = $("div[data-mobile-seq-no='1']");
+                block2 = $("div[data-mobile-seq-no='2']");
+                block3 = $("div[data-mobile-seq-no='3']");
+                block4 = $("div[data-mobile-seq-no='4']");
+                block5 = $("div[data-mobile-seq-no='5']");
+                block6 = $("div[data-mobile-seq-no='6']");
+                block7 = $("div[data-mobile-seq-no='7']");
+                block8 = $("div[data-mobile-seq-no='8']");
+                block9 = $("div[data-mobile-seq-no='9']");
+            } else {
+                // Desktop layout
+                nextLayout = "desktop";
+                block1 = $("div[data-desktop-seq-no='1']");
+                block2 = $("div[data-desktop-seq-no='2']");
+                block3 = $("div[data-desktop-seq-no='3']");
+                block4 = $("div[data-desktop-seq-no='4']");
+                block5 = $("div[data-desktop-seq-no='5']");
+                block6 = $("div[data-desktop-seq-no='6']");
+                block7 = $("div[data-desktop-seq-no='7']");
+                block8 = $("div[data-desktop-seq-no='8']");
+                block9 = $("div[data-desktop-seq-no='9']");
+            }
+
+            if (nextLayout !== currentLayout) {
+                // Reorder blocks based on their seq no
+                block1.after(block2.detach());
+                block2.after(block3.detach());
+                block3.after(block4.detach());
+                block4.after(block5.detach());
+                block5.after(block6.detach());
+                block6.after(block7.detach());
+                block7.after(block8.detach());
+                block8.after(block9.detach());
+                currentLayout = nextLayout;
+            }
+        }
+
+        // Adjust layout upon window resize
+        window.onresize = function () {
+            clearTimeout(callAdjustLayout);
+            callAdjustLayout = setTimeout(adjustLayout, 100);
+        }
+
+        // DOM is ready
+        $(function () {
+            if (detectIE()) {
+                alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
+            }
+
+            adjustLayout();
+        })
+    </script>
+
+
+
+</body>
+</html>
